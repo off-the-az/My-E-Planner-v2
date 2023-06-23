@@ -1,0 +1,30 @@
+{
+  "name": "My E-Planner v2",
+  "version": "0.0.1",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "live": "node main.js",
+    "dev": "nodemon main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/off-the-az/My-E-Planner-v2.git"
+  },
+  "author": "The AZ",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/off-the-az/My-E-Planner-v2/issues"
+  },
+  "homepage": "https://github.com/off-the-az/My-E-Planner-v2#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "mongoose": "^7.3.1",
+    "nodemailer": "^6.9.3",
+    "nodemon": "^2.0.22"
+  }
+}
