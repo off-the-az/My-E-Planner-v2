@@ -9,11 +9,8 @@ My E-Planner API is one of the main parts of the overall My E-Planner Project ba
 If you want to use this API in your application you need to fetch code to your server(local or remote):
 
 ```bash
-
 > git clone https://github.com/off-the-az/My-E-Planner-v2.git
-
 ```
-<b>REMEMBER:</b> Before you do this following steps to run project, you need to setup configuration in <b>.env</b> file using the following example in <b>.env.example</b> file. You need to do that on <b>main project folder</b>.
 
 Next, you need to install project dependencies:
 
