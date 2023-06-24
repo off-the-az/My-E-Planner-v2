@@ -1,0 +1,68 @@
+[
+    {
+        "_id": {
+			"$oid":"6495a22e4da834e23ebf2ffa"
+        },
+        "name": "User 1",
+        "email": "user1@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    },
+    {
+        "_id": {
+			"$oid": "6495a22e4da834e23ebf2ffb"
+        },
+        "name": "User 2",
+        "email": "user2@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    },
+    {
+        "_id": {
+			"$oid": "6495a22e4da834e23ebf2ffc"
+        },
+        "name": "User 3",
+        "email": "user3@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    },
+    {
+        "_id": {
+			"$oid": "6495a22e4da834e23ebf2ffd"
+        },
+        "name": "User 4",
+        "email": "user4@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    },
+    {
+        "_id": {
+			"$oid": "6495a22e4da834e23ebf2ffe"
+        },
+        "name": "User 5",
+        "email": "user5@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    },
+    {
+        "_id": {
+			"$oid": "6495a22e4da834e23ebf2fff"
+        },
+        "name": "User 6",
+        "email": "user6@gmail.com",
+        "password": "i5YoL5fbmnteeBT/9l4G1A==",
+        "chat_id": "",
+        "token": "",
+        "__v": 0
+    }
+]

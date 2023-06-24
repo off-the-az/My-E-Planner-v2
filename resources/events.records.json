@@ -1,0 +1,70 @@
+[
+	{
+		"_id": {
+			"$oid": "6497102af41f00e2478f4781"
+		},
+		"event_type": "Reminder",
+		"name": "Reminder 1",
+		"color": "black",
+		"begin": {
+			"$date": "2023-06-24T15:47:07.351Z"
+		},
+		"end": {
+			"$date": "2023-06-25T00:00:07.351Z"
+		},
+		"owner": "6495a22e4da834e23ebf2ffa",
+		"done": true,
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "6497102af41f00e2478f4782"
+		},
+		"event_type": "Event",
+		"name": "Event 1",
+		"color": "blue",
+		"begin": {
+			"$date": "2023-06-28T19:47:07.351Z"
+		},
+		"end": {
+			"$date": "2023-07-24T15:47:07.351Z"
+		},
+		"owner": "6495a22e4da834e23ebf2ffa",
+		"done": false,
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "6497102af41f00e2478f4783"
+		},
+		"event_type": "Reminder",
+		"name": "Reminder 2",
+		"color": "yellow",
+		"begin": {
+			"$date": "2023-06-25T10:00:00.351Z"
+		},
+		"end": {
+			"$date": "2023-06-25T15:00:00.351Z"
+		},
+		"owner": "6495a22e4da834e23ebf2ffa",
+		"done": false,
+		"__v": 0
+	},
+	{
+		"_id": {
+			"$oid": "6497102af41f00e2478f4784"
+		},
+		"event_type": "Event",
+		"name": "Event 2",
+		"color": "purpule",
+		"begin": {
+			"$date": "2023-06-30T12:30:00.351Z"
+		},
+		"end": {
+			"$date": "2023-09-30T23:59:59.351Z"
+		},
+		"owner": "6495a22e4da834e23ebf2ffa",
+		"done": false,
+		"__v": 0
+	}
+]

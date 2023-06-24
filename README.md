@@ -50,6 +50,13 @@ If you want to check service status, run the following command:
 
 After setup and configure you can use the following API in your application!) Enjoy!)
 
+# Basic links to project resources:
+
+Telegram Notiticator Bot: https://t.me/@MyEPlannerNoficatorBot
+Test records for importing to MongoDB Documents: 
+    - https://github.com/off-the-az/My-E-Planner-v2/blob/master/resources/user.factory.json
+    - https://github.com/off-the-az/My-E-Planner-v2/blob/master/resources/events.factory.json
+
 
 # Basic API endpoints:
 
