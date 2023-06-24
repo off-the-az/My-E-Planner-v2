@@ -4,6 +4,7 @@ const Event = require('../controller/eventsController');
 const User = require('../controller/userController');
 const EventsModel = require('../model/events.model');
 const UserModel = require('../model/user.model');
+const transporter = require('../mailer');
 
 const controller = new Event(EventsModel); 
 
@@ -75,7 +76,7 @@ async function checkBeginedEvents() {
   if(beginedEvents != null && beginedEvents.length > 0){
     const UserController = new User(UserModel);
     beginedEvents.forEach(async event => {
-      if(event.begin <= Date.now()){
+      if(event.begin <= Date.now() && event.done !== true){
         const user = await UserController.readBy({_id: event.owner});
         const mailOptions = {
           from: "a85566304@gmail.com",
@@ -84,7 +85,7 @@ async function checkBeginedEvents() {
           text: `Шановний, ${user[0].name}!\nНагадуємо вам, що ваша подія "${event.name}" завершилася! Встигніть усе реалізувати заплановане!\nЗ повагою, My E-Planner!`,
         };
         
-        transporter.sendMail(mailOptions, (error, info) => {
+        transporter.sendMail(mailOptions, async (error, info) => {
           if (error) {
             console.log("Помилка відправки електронної пошти: ", error);
           } else {
@@ -101,7 +102,7 @@ async function checkEndedEvents() {
   if(beginedEvents != null && beginedEvents.length > 0){
     const UserController = new User(UserModel);
     beginedEvents.forEach(async event => {
-      if(event.end <= Date.now()){
+      if(event.end <= Date.now() && event.done !== true){
         const user = await UserController.readBy({_id: event.owner});
         const mailOptions = {
           from: "a85566304@gmail.com",
@@ -110,10 +111,12 @@ async function checkEndedEvents() {
           text: `Шановний, ${user[0].name}!\nНагадуємо вам, що ваша подія "${event.name}" завершилася! Сподіваємось ви усе реалізували що планували!\nЗ повагою, My E-Planner!`,
         };
         
-        transporter.sendMail(mailOptions, (error, info) => {
+        transporter.sendMail(mailOptions, async (error, info) => {
           if (error) {
             console.log("Помилка відправки електронної пошти: ", error);
           } else {
+            event.done = true;
+            await controller.updateData({_id: event._id}, event);
             console.log("Електронна пошта відправлена успішно. ID: ", info.messageId);
           }
         });
@@ -122,7 +125,7 @@ async function checkEndedEvents() {
   }
 }
 
-setInterval(checkBeginedEvents, 600);
-setInterval(checkEndedEvents, 600);
+setInterval(checkBeginedEvents, 6000);
+setInterval(checkEndedEvents, 6000);
 
 module.exports = router;
