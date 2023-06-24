@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const dbconn = require('./src/database');
+const bot = require('./src/bot');
 
 const {User, Events} = require('./src/routes/index.js');
 
@@ -23,4 +24,5 @@ app.listen(6000, () => {
         `To find endpoint u need jst click 127.0.0.1:6000/api/docs\n`
     );
     dbconn();
+    bot.launch();
 });
