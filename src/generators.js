@@ -18,7 +18,6 @@ function md5(key){
 }
 
 module.exports = {
-    generatePassword,
     generateToken,
     md5
 }
