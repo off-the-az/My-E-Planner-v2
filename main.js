@@ -1,7 +1,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const dbconn = require('./src/database');
+const {dbconn} = require('./src/database');
 const bot = require('./src/bot');
 
 const {User, Events} = require('./src/routes/index.js');
