@@ -9,4 +9,8 @@ async function dbconn() {
     }).catch((err)=> console.log(`Error during connection: ${err}`));
 }
 
-module.exports = dbconn;
+async function dbdisconn() {
+    await mongoose.connection.close();
+}
+
+module.exports = {dbconn, dbdisconn};
