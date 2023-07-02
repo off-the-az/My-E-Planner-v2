@@ -5,6 +5,7 @@ const {dbconn} = require('./src/database');
 const bot = require('./src/bot');
 
 const {User, Events} = require('./src/routes/index.js');
+const {checkBeginedEvents, checkEndedEvents} = require('./src/service/mailSenderService');
 
 const corsOfOption = {
     origin: ['http://127.0.0.1:5500', 'http://localhost:5500'],
@@ -26,3 +27,6 @@ app.listen(6000, () => {
     dbconn();
     bot.launch();
 });
+
+setInterval(checkBeginedEvents, 6000);
+setInterval(checkEndedEvents, 6000);

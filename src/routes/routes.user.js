@@ -39,7 +39,7 @@ router.get('/get/byToken/:token', async function(req, res, next) {
 router.get('/login/:mail/:password', async function(req, res, next) {
   try {
     const controller = new User(UserModel);
-    res.json(await controller.login(String(req.params['mail']), String(req.params['password']));
+    res.json(await controller.login(String(req.params['mail']), String(req.params['password'])));
   } catch (err) {
     console.error(`Error while getting info from DB Users. Error: `, err.message);
     next(err);
