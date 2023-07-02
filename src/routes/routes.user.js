@@ -38,11 +38,8 @@ router.get('/get/byToken/:token', async function(req, res, next) {
 
 router.get('/login/:mail/:password', async function(req, res, next) {
   try {
-    const controller = new User(UserModel); 
-    const user = await controller.readBy({email: String(req.params['mail']), password: Generators.md5(Generators.md5(String(req.params['password'])))  });
-    user[0].token = Generators.generateToken();
-    await controller.updateData({_id: user[0].id}, user[0])
-    res.json(user);
+    const controller = new User(UserModel);
+    res.json(await controller.login(String(req.params['mail']), String(req.params['password']));
   } catch (err) {
     console.error(`Error while getting info from DB Users. Error: `, err.message);
     next(err);
@@ -51,9 +48,8 @@ router.get('/login/:mail/:password', async function(req, res, next) {
 
 router.get('/logout/:token', async function(req, res, next) {
   try {
-    const controller = new User(UserModel); 
-    const user = await controller.readBy({token: String(req.params['token']), token: ""});
-    await controller.updateData({_id: user[0].id}, user[0])
+    const controller = new User(UserModel);
+    await controller.logout(req.params['token']);
     res.json('User logout successful');
   } catch (err) {
     console.error(`Error while getting info from DB Users. Error: `, err.message);
